@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.login-form {
+    max-width: 350px;
+    width: 100%;
+}
+
+.login-form button {
+    background-color: #8B4513; /* Brown color */
+    color: white; /* White text color for contrast */
+    border: none; /* Remove default button border */
+    padding: 10px 20px; /* Add some padding for better appearance */
+    font-size: 1rem; /* Set a suitable font size */
+    cursor: pointer; /* Change cursor to pointer for interactive feel */
+    border-radius: 5px; /* Slightly rounded corners */
+    width: 100%; /* Make the button take the full width of the form */
+}
+
+.login-form button:hover {
+    background-color: #A0522D; /* Lighter brown on hover */
+}
+
+.welcome-section {
+    position: relative; /* Ensure positioning for the overlay */
+    padding: 60px; /* Increase padding for a more spacious feel */
+    background-image: url('chat.png'); /* Add your background image */
+    background-size: cover; /* Make the background cover the entire section */
+    background-position: center; /* Center the background image */
+    color: white; /* Change text color for contrast */
+    min-height: 100vh; /* Ensure the section takes up at least the full height of the viewport */
+}
+
+.welcome-section::before {
+    content: ""; /* Create an overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fade effect: adjust the last parameter for opacity */
+    z-index: 1; /* Place the overlay below text */
+}
+
+.welcome-section h1 {
+    font-family: 'Roboto', sans-serif; /* Apply the new font */
+    color: #0b0b0b; /* Ensure text color is visible against the background */
+    font-size: 3.5rem; /* Increase font size */
+    margin-bottom: 20px; /* Space below heading */
+    font-weight: 800; /* Thicker (bolder) text */
+    z-index: 2; /* Bring text above the overlay */
+    position: relative; /* Ensure proper stacking */
+}
+
+.welcome-section p {
+    font-family: 'Roboto', sans-serif; /* Apply the new font */
+    color: #000000; /* Explicit black text color */
+    font-size: 1.5rem; /* Set a suitable font size for the paragraph */
+    margin-bottom: 20px; /* Space below paragraph */
+    z-index: 2; /* Bring text above the overlay */
+    position: relative; /* Ensure proper stacking */
+}
+
+.image-grid {
+    width: 478px; /* Set a fixed width to fit two images side by side */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 5px; /* Space between the images */
+    column-gap: 10px;
+    padding: 20px;
+    padding-left: 130px;
+    box-sizing: border-box;
+}
+
+.image-item {
+    flex: 0 0 45%; /* Slightly less than 50% to account for gap */
+    max-width: 45%; /* Ensures two items per row */
+    text-align: center;
+}
+
+.image-item img {
+    width: 150px; /* Image size */
+    height: 150px; /* Image size */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Custom border-radius for specific images */
+.image-item:nth-child(1) img {
+    border-top-left-radius: 0; /* Sharp bottom-left corner */
+}
+
+.image-item:nth-child(4) img {
+    border-bottom-right-radius: 0; /* Sharp top-right corner */
+}
